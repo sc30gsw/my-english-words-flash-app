@@ -8,7 +8,7 @@ export default async function SimpleCsvFilenameLayout({
   const { filename } = await params
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center p-4">
       <h1 className="text-4xl font-bold ">
         Welcome to {decodeURIComponent(filename)}
       </h1>
