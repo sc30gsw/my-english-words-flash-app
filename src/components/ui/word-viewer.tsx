@@ -43,18 +43,20 @@ export function WordViewer({
         <p className="text-2xl font-bold whitespace-pre-line">{current.ja}</p>
 
         {showEnglish ? (
-          <button
-            type="button"
-            className="flex flex-col items-center gap-y-2 group/en"
-            onClick={() => toggle(false)}
-          >
+          <>
             <p className="text-xl text-red-500 font-bold group-hover/en:cursor-pointer whitespace-pre-line">
               {current.en}
             </p>
-            <div className="px-4 py-2 bg-transparent border border-green-500 text-green-500 rounded transition group-hover/en:cursor-pointer group-hover/en:opacity-80 w-36">
-              非表示にする
-            </div>
-          </button>
+            <button
+              type="button"
+              className="flex flex-col items-center gap-y-2 group/en"
+              onClick={() => toggle(false)}
+            >
+              <div className="px-4 py-2 bg-transparent border border-green-500 text-green-500 rounded transition group-hover/en:cursor-pointer group-hover/en:opacity-80 w-36">
+                非表示にする
+              </div>
+            </button>
+          </>
         ) : (
           <Button
             onPress={() => toggle(true)}
