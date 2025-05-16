@@ -38,7 +38,6 @@ export default async function ConversationCsvFilenamePage({
       .replace(REGEX.removeTrailingMetadata, '')
       .trim(),
   }))
-  console.log('🚀 ~ formattedWords ~ formattedWords:', formattedWords)
 
   return <WordViewer words={formattedWords} />
 }
